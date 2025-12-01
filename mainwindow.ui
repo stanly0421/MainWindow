@@ -23,8 +23,62 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu_E">
+    <property name="title">
+     <string>檔案(&amp;E)</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="action_3"/>
+    <addaction name="action_O"/>
+    <addaction name="action_C"/>
+    <addaction name="separator"/>
+    <addaction name="action_S"/>
+    <addaction name="action_A"/>
+    <addaction name="separator"/>
+    <addaction name="action_X"/>
+   </widget>
+   <addaction name="menu_E"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_3">
+   <property name="text">
+    <string>新增(&amp;N)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="action_O">
+   <property name="text">
+    <string>開啟(&amp;O)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_C">
+   <property name="text">
+    <string>關閉(&amp;C)</string>
+   </property>
+  </action>
+  <action name="action_S">
+   <property name="text">
+    <string>儲存(&amp;S)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_A">
+   <property name="text">
+    <string>另存(&amp;A)</string>
+   </property>
+  </action>
+  <action name="action_X">
+   <property name="text">
+    <string>退出(&amp;X)</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

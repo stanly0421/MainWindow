@@ -10,8 +10,10 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
@@ -21,8 +23,15 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *action_3;
+    QAction *action_O;
+    QAction *action_C;
+    QAction *action_S;
+    QAction *action_A;
+    QAction *action_X;
     QWidget *centralwidget;
     QMenuBar *menubar;
+    QMenu *menu_E;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -30,16 +39,41 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
         MainWindow->resize(800, 600);
+        action_3 = new QAction(MainWindow);
+        action_3->setObjectName("action_3");
+        action_O = new QAction(MainWindow);
+        action_O->setObjectName("action_O");
+        action_C = new QAction(MainWindow);
+        action_C->setObjectName("action_C");
+        action_S = new QAction(MainWindow);
+        action_S->setObjectName("action_S");
+        action_A = new QAction(MainWindow);
+        action_A->setObjectName("action_A");
+        action_X = new QAction(MainWindow);
+        action_X->setObjectName("action_X");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 800, 21));
+        menu_E = new QMenu(menubar);
+        menu_E->setObjectName("menu_E");
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
         MainWindow->setStatusBar(statusbar);
+
+        menubar->addAction(menu_E->menuAction());
+        menu_E->addSeparator();
+        menu_E->addAction(action_3);
+        menu_E->addAction(action_O);
+        menu_E->addAction(action_C);
+        menu_E->addSeparator();
+        menu_E->addAction(action_S);
+        menu_E->addAction(action_A);
+        menu_E->addSeparator();
+        menu_E->addAction(action_X);
 
         retranslateUi(MainWindow);
 
@@ -49,6 +83,22 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        action_3->setText(QCoreApplication::translate("MainWindow", "\346\226\260\345\242\236(&N)", nullptr));
+#if QT_CONFIG(shortcut)
+        action_3->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Z", nullptr));
+#endif // QT_CONFIG(shortcut)
+        action_O->setText(QCoreApplication::translate("MainWindow", "\351\226\213\345\225\237(&O)", nullptr));
+#if QT_CONFIG(shortcut)
+        action_O->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+O", nullptr));
+#endif // QT_CONFIG(shortcut)
+        action_C->setText(QCoreApplication::translate("MainWindow", "\351\227\234\351\226\211(&C)", nullptr));
+        action_S->setText(QCoreApplication::translate("MainWindow", "\345\204\262\345\255\230(&S)", nullptr));
+#if QT_CONFIG(shortcut)
+        action_S->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+S", nullptr));
+#endif // QT_CONFIG(shortcut)
+        action_A->setText(QCoreApplication::translate("MainWindow", "\345\217\246\345\255\230(&A)", nullptr));
+        action_X->setText(QCoreApplication::translate("MainWindow", "\351\200\200\345\207\272(&X)", nullptr));
+        menu_E->setTitle(QCoreApplication::translate("MainWindow", "\346\252\224\346\241\210(&E)", nullptr));
     } // retranslateUi
 
 };

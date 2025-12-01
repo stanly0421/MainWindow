@@ -79,6 +79,8 @@ void *MainWindow::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_staticMetaObjectStaticContent<qt_meta_tag_ZN10MainWindowE_t>.strings))
         return static_cast<void*>(this);
+    if (!strcmp(_clname, "Ui_MainWindow"))
+        return static_cast< Ui_MainWindow*>(this);
     return QMainWindow::qt_metacast(_clname);
 }
 

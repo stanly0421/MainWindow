@@ -37,7 +37,17 @@
     <addaction name="separator"/>
     <addaction name="action_X"/>
    </widget>
+   <widget class="QMenu" name="menu_E_2">
+    <property name="title">
+     <string>編輯(&amp;E)</string>
+    </property>
+    <addaction name="action_U"/>
+    <addaction name="action_T"/>
+    <addaction name="action_C_2"/>
+    <addaction name="action_A_2"/>
+   </widget>
    <addaction name="menu_E"/>
+   <addaction name="menu_E_2"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="action_3">
@@ -77,6 +87,38 @@
   <action name="action_X">
    <property name="text">
     <string>退出(&amp;X)</string>
+   </property>
+  </action>
+  <action name="action_U">
+   <property name="text">
+    <string>還原(&amp;U)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="action_T">
+   <property name="text">
+    <string>剪下(&amp;T)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="action_C_2">
+   <property name="text">
+    <string>複製(&amp;C)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="action_A_2">
+   <property name="text">
+    <string>全選(&amp;A)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
    </property>
   </action>
  </widget>

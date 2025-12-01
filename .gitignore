@@ -21,3 +21,4 @@ build/
 
 # Binary
 MainWindow
+_codeql_detected_source_root

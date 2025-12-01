@@ -6,6 +6,7 @@
 
 class MainWindow : public QMainWindow,
                    public Ui_MainWindow
+
 {
     Q_OBJECT
 

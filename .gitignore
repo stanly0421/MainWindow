@@ -1,0 +1,24 @@
+# Build artifacts
+*.o
+*.obj
+*.exe
+moc_*.cpp
+moc_*.h
+moc_predefs.h
+ui_*.h
+
+# Qt generated files
+Makefile
+Makefile.Debug
+Makefile.Release
+.qmake.stash
+.qmake.cache
+
+# Build directories
+debug/
+release/
+build/
+
+# Binary
+MainWindow
+_codeql_detected_source_root
